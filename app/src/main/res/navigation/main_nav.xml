@@ -5,13 +5,31 @@
     android:id="@+id/main_nav"
     app:startDestination="@id/nav_one">
     <fragment
-        android:id="@+id/nav_one"
-        android:name="com.example.experement_android.FirstFragment"
-        android:label="Первый фрагмент"
-        tools:layout="@layout/first_fragment"/>
-    <fragment
         android:id="@+id/nav_two"
         android:name="com.example.experement_android.SecondFragment"
         android:label="Второй фрагмент"
         tools:layout="@layout/second_fragment"/>
+    <fragment
+        android:id="@+id/nav_one"
+        android:name="com.example.experement_android.FirstFragment"
+        android:label="first_fragment"
+        tools:layout="@layout/first_fragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_firstFragmentOne"
+            app:destination="@id/firstFragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragmentOne"
+        android:name="com.example.experement_android.FirstFragmentOne"
+        android:label="first_fragment_one"
+        tools:layout="@layout/first_fragment_one" >
+        <action
+            android:id="@+id/action_firstFragmentOne_to_firstFragmentTwo"
+            app:destination="@id/firstFragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragmentTwo"
+        android:name="com.example.experement_android.FirstFragmentTwo"
+        android:label="first_fragment_two"
+        tools:layout="@layout/first_fragment_two" />
 </navigation>

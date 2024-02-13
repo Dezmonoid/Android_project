@@ -20,12 +20,11 @@ class FirstFragmentOne : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.button.setOnClickListener {
-            view.findNavController().navigate(R.id.first_two)
-        }
         super.onViewCreated(view, savedInstanceState)
+        binding.buttonOne.setOnClickListener {
+            findNavController().navigate(R.id.firstFragmentTwo)
+        }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
